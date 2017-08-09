@@ -26,7 +26,7 @@
         <BlockInterface>Measure</BlockInterface>
         <Flags>PBROnly</Flags>
         <Hardware>RudolphGyro</Hardware>
-        <HardwareModeInfo Name="TILT-ANG" ID="76" DataloggingModeID="6" DataloggingDatasetIndex="0" Range="-180,180" Unit="deg" IsAccumulator="True"/>
+        <HardwareModeInfo Name="TILT-ANG" ID="6" DataloggingModeID="6" DataloggingDatasetIndex="0" Range="-180,180" Unit="deg" IsAccumulator="True"/>
       </Block>
       <Block>
         <Mode>MeasureRate</Mode>
@@ -36,7 +36,7 @@
         <BlockInterface>Measure</BlockInterface>
         <Flags>PBROnly</Flags>
         <Hardware>RudolphGyro</Hardware>
-        <HardwareModeInfo Name="GYRO-RATE" ID="5" DataloggingModeID="5" DataloggingDatasetIndex="0" Range="-440,440" Unit="d/s" />
+        <HardwareModeInfo Name="TILT-RATE" ID="5" DataloggingModeID="5" DataloggingDatasetIndex="0" Range="-440,440" Unit="d/s" />
       </Block>
       <Block>
         <Mode>CompareAngle</Mode>
