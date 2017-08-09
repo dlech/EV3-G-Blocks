@@ -4,7 +4,7 @@
 	<PolyGroup Name="GyroTilt" BlockFamily="Sensor">
       <Parameter Name="Direction" Direction="Input" DataType="Int32" DefaultValue="2" Configuration="builtin://Identification_WaitForChange.xml" Identification="builtin://Identification_WaitForChange.xml" />
       <Parameter Name="Port" CompilerDirectives="OneInputPort" Direction="Input" DefaultValue="1.2" />
-      <Parameter Name="Comparison" Direction="Input" Configuration="Identification_ComparisonType.xml" Identification="builtin://Identification_ComparisonType.xml" DataType="Int32" DefaultValue="4" />
+      <Parameter Name="Comparison" Direction="Input" Configuration="builtin://Identification_ComparisonType.xml" Identification="builtin://Identification_ComparisonType.xml" DataType="Int32" DefaultValue="4" />
       <Parameter Name="Threshold" Identification="builtin://Identification_Threshold_Gyro.xml" DataType="Single" Direction="Input" DefaultValue="90" />
       <Parameter Name="Change" Identification="builtin://Identification_Numeric.png" DataType="Single" Direction="Input" DefaultValue="10" />
       <Parameter Name="i" CompilerDirectives="WaitForIteration" DataType="Int32" Direction="Input" DefaultValue="0" />
