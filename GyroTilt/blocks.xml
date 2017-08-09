@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <EditorDefinitions>
-  <PolyGroups ModuleName="LEGO Gyro (Tilt)" ModuleVersion="1.0.0">
+  <PolyGroups ModuleName="LEGO Gyro (Tilt)" ModuleVersion="1.0.1">
 	<PolyGroup Name="GyroTilt" BlockFamily="Sensor">
       <Parameter Name="Direction" Direction="Input" DataType="Int32" DefaultValue="2" Configuration="builtin://Identification_WaitForChange.xml" Identification="builtin://Identification_WaitForChange.xml" />
       <Parameter Name="Port" CompilerDirectives="OneInputPort" Direction="Input" DefaultValue="1.2" />
