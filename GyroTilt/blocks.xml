@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EditorDefinitions>
+  <PolyGroups ModuleName="LEGO Gyro (Tilt)" ModuleVersion="1.0.0">
+	<PolyGroup Name="GyroTilt" BlockFamily="Sensor">
+      <Parameter Name="Direction" Direction="Input" DataType="Int32" DefaultValue="2" Configuration="builtin://Identification_WaitForChange.xml" Identification="builtin://Identification_WaitForChange.xml" />
+      <Parameter Name="Port" CompilerDirectives="OneInputPort" Direction="Input" DefaultValue="1.2" />
+      <Parameter Name="Comparison" Direction="Input" Configuration="Identification_ComparisonType.xml" Identification="builtin://Identification_ComparisonType.xml" DataType="Int32" DefaultValue="4" />
+      <Parameter Name="Threshold" Identification="builtin://Identification_Threshold_Gyro.xml" DataType="Single" Direction="Input" DefaultValue="90" />
+      <Parameter Name="Change" Identification="builtin://Identification_Numeric.png" DataType="Single" Direction="Input" DefaultValue="10" />
+      <Parameter Name="i" CompilerDirectives="WaitForIteration" DataType="Int32" Direction="Input" DefaultValue="0" />
+      <Parameter Name="Result" CompilerDirectives="Result" Identification="builtin://Identification_CompareResult.png" DataType="Boolean" Direction="Output" />
+      <Parameter Name="Angle" Identification="builtin://Identification_angle.png" Direction="Output" DataType="Single" />
+      <Parameter Name="Rate" Identification="builtin://Identification_Rate.png" Direction="Output" DataType="Single" />
+      <Hardware>
+        <EV3PlotColor>#ff5d5d5d</EV3PlotColor>
+        <EV3AutoID>32</EV3AutoID>
+        <Direction>Input</Direction>
+        <DefaultPort>1.2</DefaultPort>
+      </Hardware>
+      <Block>
+        <Mode>MeasureAngle</Mode>
+        <Reference Type="VILib" Name="GyroTiltDegrees.vix" />
+        <ParameterReference Name="Port" />
+        <ParameterReference Name="Angle" />
+        <PaletteInfo Weight="0.5" />
+        <BlockInterface>Measure</BlockInterface>
+        <Flags>PBROnly</Flags>
+        <Hardware>RudolphGyro</Hardware>
+        <HardwareModeInfo Name="TILT-ANG" ID="76" DataloggingModeID="6" DataloggingDatasetIndex="0" Range="-180,180" Unit="deg" IsAccumulator="True"/>
+      </Block>
+      <Block>
+        <Mode>MeasureRate</Mode>
+        <Reference Type="VILib" Name="GyroTiltRate.vix" />
+        <ParameterReference Name="Port" />
+        <ParameterReference Name="Rate" />
+        <BlockInterface>Measure</BlockInterface>
+        <Flags>PBROnly</Flags>
+        <Hardware>RudolphGyro</Hardware>
+        <HardwareModeInfo Name="GYRO-RATE" ID="5" DataloggingModeID="5" DataloggingDatasetIndex="0" Range="-440,440" Unit="d/s" />
+      </Block>
+      <Block>
+        <Mode>CompareAngle</Mode>
+        <Reference Type="VILib" Name="GyroTiltAngleCompare.vix" />
+        <ParameterReference Name="Port" />
+        <ParameterReference Name="Comparison" />
+        <ParameterReference Name="Threshold" />
+        <ParameterReference Name="Result" />
+        <ParameterReference Name="Angle" />
+        <BlockInterface>Compare</BlockInterface>
+        <Flags>PBROnly</Flags>
+        <Hardware>RudolphGyro</Hardware>
+      </Block>
+      <Block>
+        <Mode>CompareRate</Mode>
+        <Reference Type="VILib" Name="GyroTiltRateCompare.vix" />
+        <ParameterReference Name="Port" />
+        <ParameterReference Name="Comparison" />
+        <ParameterReference Name="Threshold" />
+        <ParameterReference Name="Result" />
+        <ParameterReference Name="Rate" />
+        <BlockInterface>Compare</BlockInterface>
+        <Flags>PBROnly</Flags>
+        <Hardware>RudolphGyro</Hardware>
+      </Block>
+      <Block>
+        <Mode>ChangeAngle</Mode>
+        <Reference Type="VILib" Name="DeltaWaitGyroTiltAngle.vix" />
+        <ParameterReference Name="Port" />
+        <ParameterReference Name="Direction" />
+        <ParameterReference Name="Change" />
+        <ParameterReference Name="Result" />
+        <ParameterReference Name="Angle" />
+        <ParameterReference Name="i" />
+        <BlockInterface>Change</BlockInterface>
+        <Flags>PBROnly</Flags>
+        <Hardware>RudolphGyro</Hardware>
+      </Block>
+      <Block>
+        <Mode>ChangeRate</Mode>
+        <Reference Type="VILib" Name="DeltaWaitGyroTiltRate.vix" />
+        <ParameterReference Name="Port" />
+        <ParameterReference Name="Direction" />
+        <ParameterReference Name="Change" />
+        <ParameterReference Name="Result" />
+        <ParameterReference Name="Rate" />
+        <ParameterReference Name="i" />
+        <BlockInterface>Change</BlockInterface>
+        <Flags>PBROnly</Flags>
+        <Hardware>RudolphGyro</Hardware>
+      </Block>
+    </PolyGroup>
+  </PolyGroups>
+</EditorDefinitions>

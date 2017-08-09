@@ -1,0 +1,206 @@
+<h1>Gyro Sensor Block<a name="top"></a></h1>
+<div id="block_173" class="block blockHeader">
+    <table cellspacing="0" cellpadding="0" border="0">
+        <tr>
+            <td valign="top" class="image">
+                <img width="128" height="128" src="../../nonlocalized/editor/resources/content/Sensor_Palette_Gyro_128x128.png"/>
+            </td>
+            <td valign="top" class="description">
+                <div class="text-wrapper">The Gyro Sensor block gets data from the Gyro Sensor. You can measure the rotation rate or rotation angle
+                    and get a Numeric output. You can also compare the sensor data to a Threshold Value to get a Logic (True
+                    or False) output.<br />
+                    <br /> See <a href="page.html?Path=editor%2FUsingSensors_Gyro.html">Using the Gyro Sensor</a> for more
+                    information about what the Gyro Sensor does, the data that it provides, and programming examples.
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
+<div id="block_175" class="block blockTip">
+    <div class="title">Tips and Tricks</div>
+    <div class="boxContent">
+        <div class="description">The Gyro Sensor block outputs data with a <a href="page.html?Path=editor%2FDataWires.html">Data Wire</a>. See
+            <a href="page.html?Path=editor%2FUsingSensors_Gyro.html">Using the Gyro Sensor</a> for other ways to use the Gyro Sensor that don’t require a data wire.
+        </div>
+    </div>
+</div>
+<div id="block_182" class="block blockChaptor">
+    <div class="title">
+        <a name="ChooseTheSensorPortAndMode" style="position:relative; top:-10px;"></a>Choose the Sensor Port and Mode
+    </div>
+    <div class="description">
+        <img src="../../nonlocalized/editor/resources/content/Sensor_Palette_Gyro.png" width="304" height="155" /><br />
+        <br />
+        <img src="../../nonlocalized/editor/resources/content/1.png" width="26" height="22" /> Port Selector <br />
+        <img src="../../nonlocalized/editor/resources/content/2.png" width="26" height="22" /> Mode Selector<br />
+        <img src="../../nonlocalized/editor/resources/content/3.png" width="26" height="22" /> Inputs<br />
+        <img src="../../nonlocalized/editor/resources/content/4.png" width="26" height="22" /> Outputs<br />
+        <br /> Use the <a href="page.html?Path=editor%2FPortSelector.html">Port Selector</a> on the top of the block to make
+        sure that the sensor port number (1, 2, 3, or 4) matches the port on the EV3 Brick that the Gyro Sensor is connected
+        to.<br />
+        <br />
+        Use the Mode Selector to select the mode for the block. The <a href="#InputsAndOutputs">Inputs and Outputs</a>
+        available will change depending on the mode.
+    </div>
+</div>
+<div id="block_183" class="block blockChaptor">
+    <div class="title">Modes</div>
+    <div class="description"></div>
+</div>
+<div id="block_184" class="block blockMode">
+    <div class="title">
+        <a name="Mode_MeasureAngle" style="position:relative; top:-10px;"></a>Measure – Angle
+    </div>
+    <div class="description"><img src="../../nonlocalized/editor/resources/content/Sensor_Palette_GyroSensor_Measure_Angle.png" width="304" height="95" /><br />
+        <br /> The Measure – Angle mode outputs the rotation angle in <a href="#Angle">Angle</a>. The angle is measured relative
+        to the last time the sensor was reset. Use the <a href="#Mode_Reset">Reset</a> mode to reset the angle to 0.
+    </div>
+</div>
+<div id="block_185" class="block blockMode">
+    <div class="title">
+        <a name="Mode_MeasureRate" style="position:relative; top:-10px;"></a>Measure – Rate
+    </div>
+    <div class="description"><img src="../../nonlocalized/editor/resources/content/Sensor_Palette_GyroSensor_Measure_Rate.png" width="304" height="95" /><br />
+        <br /> The Measure – Rate mode outputs the rotation rate in <a href="#Rate">Rate</a>.
+    </div>
+    <div class="links">
+        See programming example 3 in <a href="page.html?Path=editor%2FUsingSensors_Gyro.html">Using the Gyro Sensor</a>.
+    </div>
+</div>
+<div id="block_186" class="block blockMode">
+    <div class="title">
+        <a name="Mode_MeasureAngleAndRate" style="position:relative; top:-10px;"></a>Measure – Angle and Rate
+    </div>
+    <div class="description">
+        <img src="../../nonlocalized/editor/resources/content/Sensor_Palette_GyroSensor_Measure_AngleRate.png" width="304" height="95" /><br />
+        <br /> The Measure – Angle and Rate mode outputs the rotation angle in <a href="#Angle">Angle</a> and the rotation
+        rate in <a href="#Rate">Rate</a>.
+    </div>
+</div>
+<div id="block_187" class="block blockMode">
+    <div class="title">
+        <a name="Mode_CompareAngle" style="position:relative; top:-10px;"></a>Compare – Angle
+    </div>
+    <div class="description">
+        <img src="../../nonlocalized/editor/resources/content/Sensor_Palette_GyroSensor_Compare_Angle.png" width="304" height="95" /><br />
+        <br /> The Compare – Angle mode compares the rotation angle to the <a href="#Threshold">Threshold Value</a> using
+        the selected <a href="#Comparison">Compare Type</a>. The True/False result is output in <a href="#Result">Compare Result</a>,
+        and the rotation angle is output in <a href="#Angle">Angle</a>.
+    </div>
+</div>
+<div id="block_188" class="block blockMode">
+    <div class="title"><a name="Mode_CompareRate" style="position:relative; top:-10px;"></a>Compare – Rate</div>
+    <div class="description"><img src="../../nonlocalized/editor/resources/content/Sensor_Palette_GyroSensor_Compare_Rate.png" width="304" height="95"
+        /><br />
+        <br /> The Compare – Rate mode compares the rotation rate to the <a href="#Threshold">Threshold Value</a> using the
+        selected <a href="#Comparison">Compare Type</a>. The True/False result is output in <a href="#Result">Compare Result</a>,
+        and the rotation rate is output in <a href="#Rate">Rate</a>.</div>
+</div>
+<div id="block_1323" class="block blockMode">
+    <div class="title">
+        <a name="Mode_Reset" style="position:relative; top:-10px;"></a>Reset
+    </div>
+    <div class="description"><img src="../../nonlocalized/editor/resources/content/Sensor_Palette_GyroSensor_Reset.png" width="304" height="95" /><br />
+        <br /> The Reset mode resets the rotation angle of the sensor to 0 (zero). Measurements of the rotation angle measure
+        the motion relative to the last time the sensor was reset.
+    </div>
+</div>
+<div id="block_189" class="block blockTip">
+    <div class="title">Tips and Tricks</div>
+    <div class="boxContent">
+        <div class="description">
+            The rotation angle is computed by repeatedly adding rotation rate readings over time. Small inaccuracies in the rotation
+            rate will add up over time and cause the rotation angle to “drift”. Resetting the rotation angle to 0 clears
+            the error and defines a new starting point for future angle measurements.
+        </div>
+    </div>
+</div>
+<div id="block_191" class="block blockChaptor">
+    <div class="title">
+        <a name="InputsAndOutputs" style="position:relative; top:-10px;"></a>Inputs and Outputs <a name="Parameters" style="position:relative; top:-10px;"></a>
+    </div>
+    <div class="description">
+        The inputs available for the Gyro Sensor block will depend on the mode selected. You can enter the input values directly
+        into the block. Alternatively, the input values can be supplied by <a href="page.html?Path=editor%2FDataWires.html">Data Wires</a>
+        from the outputs of other Programming Blocks.
+    </div>
+</div>
+<div id="block_192" class="block blockTable">
+    <table class="blockTable">
+        <tr>
+            <th>Input</th>
+            <th>Type</th>
+            <th>Allowed Values</th>
+            <th>Notes</th>
+        </tr>
+        <tr>
+            <td>Compare Type <a name="Comparison" style="position:relative; top:-10px;"></a></td>
+            <td>Numeric</td>
+            <td>0 - 5</td>
+            <td>
+                0: = (Equal to)<br />
+                1: ≠ (Not Equal to)<br />
+                2: &gt; (Greater than)<br />
+                3: ≥ (Greater than or Equal to)<br />
+                4: &lt; (Less than)<br />
+                5: ≤ (Less than or Equal to)
+            </td>
+        </tr>
+        <tr>
+            <td>Threshold Value <a name="Threshold" style="position:relative; top:-10px;"></a></td>
+            <td>Numeric</td>
+            <td>Any number</td>
+            <td>Value to compare sensor data to</td>
+        </tr>
+    </table>
+</div>
+<div id="block_193" class="block blockStep">
+    <div class="title"></div>
+    <div class="description">
+        The outputs available will depend on the mode selected. To use an output, use a <a href="page.html?Path=editor%2FDataWires.html">Data Wire</a>
+        to connect it to another Programming Block.
+    </div>
+</div>
+<div id="block_194" class="block blockTable ">
+    <table class="blockTable">
+        <tr>
+            <th>Output</th>
+            <th>Type</th>
+            <th>Notes</th>
+        </tr>
+        <tr>
+            <td>Angle <a name="Angle" style="position:relative; top:-10px;"></a></td>
+            <td>Numeric</td>
+            <td>
+                Rotation angle in degrees.<br />
+                Measured from the last reset.<br />
+                Reset with the Reset mode.
+            </td>
+        </tr>
+        <tr>
+            <td>Rate <a name="Rate" style="position:relative; top:-10px;"></a></td>
+            <td>Numeric</td>
+            <td>Rotation rate in degrees per second.</td>
+        </tr>
+        <tr>
+            <td>Compare Result <a name="Result" style="position:relative; top:-10px;"></a></td>
+            <td>Logic</td>
+            <td>True/False result of a Compare mode.</td>
+        </tr>
+    </table>
+</div>
+
+<div id="quick">
+    <div class="header"><a href="#header">Gyro</a></div>
+    <div class="quickText">Quick links</div>
+    <ul>
+        <li><a href="#ChooseTheSensorPortAndMode">Choose the Sensor Port and Mode</a></li>
+        <li><a href="#Mode_MeasureAngle">Measure – Angle </a></li>
+        <li><a href="#Mode_MeasureRate">Measure – Rate </a></li>
+        <li><a href="#Mode_MeasureAngleAndRate">Measure – Angle and Rate</a></li>
+        <li><a href="#Mode_CompareAngle">Compare – Angle </a></li>
+        <li><a href="#Mode_CompareRate">Compare – Rate </a></li>
+        <li><a href="#Mode_Reset">Reset</a></li>
+        <li><a href="#InputsAndOutputs">Inputs and Outputs</a></li>
+    </ul>
+</div>

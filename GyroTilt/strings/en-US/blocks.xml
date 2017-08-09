@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EditorStrings>
+  <PolyGroups ModuleName="LEGO Gyro (Tilt)">
+    <PolyGroup Name="GyroTilt" DisplayName="Gyro Sensor (Tilt)" DisplayNamePrefix="Tilt">
+      <Description><![CDATA[<p>Context help for PolyGroup <b>Gyro Sensor</b></p>]]></Description>
+      <Parameter Name="Direction" DisplayName="Direction" Link="page.html?Path=blocks%2FLEGO%2FWait.html#Direction">
+        <Description><![CDATA[<p><b>Type:</b> Numeric<br/><b>Notes:</b> Direction for a Numeric sensor value to change.<br/>Used in Sensor Change Modes that have an Amount input.<br/>0 = Increase<br/>1 = Decrease<br/>2 = Any</p>]]></Description>
+      </Parameter>
+      <Parameter Name="Port" DisplayName="Port" Link="page.html?Path=editor%2FPortSelector.html#Port">
+        <Description><![CDATA[Many programming blocks require that you select the ports on the EV3 Brick (A, B, C, D, 1, 2, 3, and 4) that these blocks will use. The Port Selectors are in the top right-hand corner of these blocks.]]></Description>
+      </Parameter>
+      <Parameter Name="Comparison" DisplayName="Compare Type">
+        <Description><![CDATA[<p><b>Type:</b> Numeric<br/><b>Allowed Values:</b> 0 - 5<br/><b>Notes:</b> 0:  = (Equal to)<br/>1:  ≠ (Not Equal to)<br/>2:  &gt; (Greater than)<br/>3:  ≥ (Greater than or Equal to)<br/>4:  &lt; (Less than)<br/>5:  ≤ (Less than or Equal to)</p>]]></Description>
+      </Parameter>
+      <Parameter Name="Threshold" DisplayName="Threshold Value">
+        <Description><![CDATA[<p><b>Type:</b> Numeric<br/><b>Allowed Values:</b> Any number<br/><b>Notes:</b> Value to compare sensor data to</p>]]></Description>
+      </Parameter>
+      <Parameter Name="Change" DisplayName="Amount" Link="page.html?Path=blocks%2FLEGO%2FWait.html#Change">
+        <Description><![CDATA[<p><b>Type:</b> Numeric<br/><b>Notes:</b> Amount for sensor value to change in a Sensor Change Mode</p>]]></Description>
+      </Parameter>
+      <Parameter Name="Result" DisplayName="Compare Result">
+        <Description><![CDATA[<p><b>Type:</b> Logic<br/><b>Notes:</b> True/False result of a Compare mode.</p>]]></Description>
+      </Parameter>
+      <Parameter Name="Angle" DisplayName="Angle">
+        <Description><![CDATA[<p><b>Type:</b> Numeric<br/><b>Notes:</b> Rotation angle in degrees.<br/>Measured from the last reset.<br/>Reset with the Reset mode.</p>]]></Description>
+      </Parameter>
+      <Parameter Name="Rate" DisplayName="Rate">
+        <Description><![CDATA[<p><b>Type:</b> Numeric<br/><b>Notes:</b> Rotation rate in degrees per second.</p>]]></Description>
+      </Parameter>
+      <Block Mode="MeasureAngle" DisplayName="Angle">
+        <Description><![CDATA[The Measure – Angle mode outputs the rotation angle in Angle. The angle is measured relative to the last time the sensor was reset. Use the Reset mode to reset the angle to 0.]]></Description>
+      </Block>
+      <Block Mode="MeasureRate" DisplayName="Rate">
+        <Description><![CDATA[The Measure – Rate mode outputs the rotation rate in Rate.]]></Description>
+      </Block>
+      <Block Mode="CompareAngle" DisplayName="Angle">
+        <Description><![CDATA[The Compare – Angle mode compares the rotation angle to the Threshold Value using the selected Compare Type. The True/False result is output in Compare Result, and the rotation angle is output in Angle.]]></Description>
+      </Block>
+      <Block Mode="CompareRate" DisplayName="Rate">
+        <Description><![CDATA[The Compare – Rate mode compares the rotation rate to the Threshold Value using the selected Compare Type. The True/False result is output in Compare Result, and the rotation rate is output in Rate.]]></Description>
+      </Block>
+      <Block Mode="Reset" DisplayName="Reset">
+        <Description><![CDATA[The Reset mode resets the rotation angle of the sensor to 0 (zero). Measurements of the rotation angle measure the motion relative to the last time the sensor was reset.]]></Description>
+      </Block>
+      <Block Mode="ChangeAngle" DisplayName="Angle" Link="page.html?Path=blocks%2FLEGO%2FWait.html#Mode_ChangeAngle">
+        <Description><![CDATA[Each of the sensor types listed in the Wait block has one or more Change modes. A Change mode will continuously read data from the sensor and wait for it to change to a different value, or change by an amount that you specify. You can wait for some types of sensor data to change by a certain Amount, and other types to change to a  different value.]]></Description>
+      </Block>
+      <Block Mode="ChangeRate" DisplayName="Rate" Link="page.html?Path=blocks%2FLEGO%2FWait.html#Mode_ChangeRate">
+        <Description><![CDATA[Each of the sensor types listed in the Wait block has one or more Change modes. A Change mode will continuously read data from the sensor and wait for it to change to a different value, or change by an amount that you specify. You can wait for some types of sensor data to change by a certain Amount, and other types to change to a  different value.]]></Description>
+      </Block>
+      <Block Mode="WaitGyroCompareAngle" DisplayName="" Link="page.html?Path=editor%2FUsingSensors_Gyro.html#Mode_WaitGyroCompareAngle">
+        <Description><![CDATA[<p><b>Mode:</b> Gyro Sensor - Compare<br/><b>Use:</b> Wait for the rotation angle or rate to reach a certain value.</p>]]></Description>
+      </Block>
+      <Block Mode="WaitGyroCompareRate" DisplayName="" Link="page.html?Path=editor%2FUsingSensors_Gyro.html#Mode_WaitGyroCompareRate">
+        <Description><![CDATA[<p><b>Mode:</b> Gyro Sensor - Compare<br/><b>Use:</b> Wait for the rotation angle or rate to reach a certain value.</p>]]></Description>
+      </Block>
+      <Block Mode="WaitGyroChangeAngle" DisplayName="" Link="page.html?Path=blocks%2FLEGO%2FWait.html#Mode_WaitGyroChangeAngle">
+        <Description><![CDATA[Each of the sensor types listed in the Wait block has one or more Change modes. A Change mode will continuously read data from the sensor and wait for it to change to a different value, or change by an amount that you specify. You can wait for some types of sensor data to change by a certain Amount, and other types to change to a  different value.]]></Description>
+      </Block>
+      <Block Mode="WaitGyroChangeRate" DisplayName="" Link="page.html?Path=blocks%2FLEGO%2FWait.html#Mode_WaitGyroChangeRate">
+        <Description><![CDATA[Each of the sensor types listed in the Wait block has one or more Change modes. A Change mode will continuously read data from the sensor and wait for it to change to a different value, or change by an amount that you specify. You can wait for some types of sensor data to change by a certain Amount, and other types to change to a  different value.]]></Description>
+      </Block>
+      <Block Mode="LoopGyroCompareAngle" DisplayName="" Link="page.html?Path=editor%2FUsingSensors_Gyro.html#Mode_LoopGyroCompareAngle">
+        <Description><![CDATA[<p><b>Mode:</b> Gyro Sensor<br/><b>Use:</b> Repeat a sequence of blocks until the rotation angle or rate reaches a certain value.</p>]]></Description>
+      </Block>
+      <Block Mode="LoopGyroCompareRate" DisplayName="" Link="page.html?Path=editor%2FUsingSensors_Gyro.html#Mode_LoopGyroCompareRate">
+        <Description><![CDATA[<p><b>Mode:</b> Gyro Sensor<br/><b>Use:</b> Repeat a sequence of blocks until the rotation angle or rate reaches a certain value.</p>]]></Description>
+      </Block>
+      <Block Mode="SwitchGyroCompareAngle" DisplayName="" Link="page.html?Path=editor%2FUsingSensors_Gyro.html#Mode_SwitchGyroCompareAngle">
+        <Description><![CDATA[<p><b>Mode:</b> Gyro Sensor<br/><b>Use:</b> Choose between two sequences of blocks based on the rotation angle or rate.</p>]]></Description>
+      </Block>
+      <Block Mode="SwitchGyroCompareRate" DisplayName="" Link="page.html?Path=editor%2FUsingSensors_Gyro.html#Mode_SwitchGyroCompareRate">
+        <Description><![CDATA[<p><b>Mode:</b> Gyro Sensor<br/><b>Use:</b> Choose between two sequences of blocks based on the rotation angle or rate.</p>]]></Description>
+      </Block>
+    </PolyGroup>
+  </PolyGroups>
+</EditorStrings>

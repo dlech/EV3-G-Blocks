@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile Version="1.0.2.10" xmlns="http://www.ni.com/SourceModel.xsd">
+    <Namespace Name="Project">
+        <VirtualInstrument IsTopLevel="false" IsReentrant="false" Version="1.0.2.0" xmlns="http://www.ni.com/VirtualInstrument.xsd">
+            <DataItem Name="SequenceIn" DataType="NationalInstruments:SourceModel:DataTypes:X3SequenceWireDataType" DefaultTerminalDirection="Output" CallUsage="None" CallDirection="Input" CallIndex="6" />
+            <DataItem Name="SequenceOut" DataType="NationalInstruments:SourceModel:DataTypes:X3SequenceWireDataType" DefaultTerminalDirection="Input" CallUsage="None" CallDirection="Output" CallIndex="6" />
+            <DataItem Name="Comparison" DataType="Int32" DefaultTerminalDirection="Output" CallUsage="None" CallDirection="Input" CallIndex="1" DefaultValue="4" />
+            <DataItem Name="Threshold" DataType="Single" DefaultTerminalDirection="Output" CallUsage="None" CallDirection="Input" CallIndex="2" DefaultValue="90" />
+            <DataItem Name="Result" DataType="Boolean" DefaultTerminalDirection="Input" CallUsage="None" CallDirection="Output" CallIndex="0" DefaultValue="False" />
+            <DataItem Name="Port" DataType="Single" DefaultTerminalDirection="Output" CallUsage="None" CallDirection="Input" CallIndex="0" DefaultValue="0" />
+            <DataItem Name="Rate" DataType="Single" DefaultTerminalDirection="Input" CallUsage="None" CallDirection="Output" CallIndex="1" DefaultValue="0" />
+            <DataItem Name="InterruptsToListenFor_16B03592_CD76_4D58_8DC3_E3C3091E327A" DataType="Int32" DefaultTerminalDirection="Output" CallUsage="None" CallDirection="Input" CallIndex="5" />
+            <FrontPanel>
+                <fpruntime:FrontPanelCanvas xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:fpruntime="clr-namespace:NationalInstruments.LabVIEW.FrontPanelRuntime;assembly=NationalInstruments.LabVIEW.FrontPanelRuntime" xmlns:Model="clr-namespace:NationalInstruments.SourceModel.Designer;assembly=NationalInstruments.SourceModel" xmlns:erics="clr-namespace:NationalInstruments.Controls;assembly=NationalInstruments.Controls.Numerics" xmlns:ation="http://schemas.microsoft.com/winfx/2006/xaml/presentation" x:Name="FrontPanel" Model:DesignerSurfaceProperties.CanSnapToObjects="True" Model:DesignerSurfaceProperties.SnapToObjects="True" Model:DesignerSurfaceProperties.ShowSnaplines="True" Model:DesignerSurfaceProperties.ShowControlAdorners="True" Width="640" Height="480">
+                    <erics:Int32NumericTextBox x:Name="Comparison" Width="69" Height="22" Value="{Binding Path=Comparison, Mode=TwoWay}" TabIndex="2" Margin="0" ation:Canvas.Left="135.5" ation:Canvas.Top="91">
+                        <fpruntime:AnimationProperties.Animations>
+                            <fpruntime:AnimationsContainer />
+                        </fpruntime:AnimationProperties.Animations>
+                        <fpruntime:EventProperties.Events>
+                            <fpruntime:EventContainer />
+                        </fpruntime:EventProperties.Events>
+                        <fpruntime:BuddyReferenceProperties.BuddyProperties>
+                            <fpruntime:BuddyProperties BuddyReferences="Label,Label" />
+                        </fpruntime:BuddyReferenceProperties.BuddyProperties>
+                    </erics:Int32NumericTextBox>
+                    <ation:TextBlock x:Name="Label" Text="Comparison" Model:DesignerNodeProperties.SnapTo="False" Visibility="Visible" ation:Canvas.Left="135.5" ation:Canvas.Top="71" Margin="0">
+                        <fpruntime:AnimationProperties.Animations>
+                            <fpruntime:AnimationsContainer />
+                        </fpruntime:AnimationProperties.Animations>
+                        <fpruntime:EventProperties.Events>
+                            <fpruntime:EventContainer />
+                        </fpruntime:EventProperties.Events>
+                        <fpruntime:BuddyReferenceProperties.BuddyProperties>
+                            <fpruntime:BuddyProperties BuddyReferences="" BuddyOwner="Comparison" BuddyOffset="0, -20" BuddyVisible="True" BuddyLocked="False" />
+                        </fpruntime:BuddyReferenceProperties.BuddyProperties>
+                    </ation:TextBlock>
+                    <erics:SingleNumericTextBox x:Name="Threshold" Width="69" Height="22" Value="{Binding Path=Threshold, Mode=TwoWay}" TabIndex="4" Margin="0" ation:Canvas.Left="135.5" ation:Canvas.Top="198">
+                        <fpruntime:AnimationProperties.Animations>
+                            <fpruntime:AnimationsContainer />
+                        </fpruntime:AnimationProperties.Animations>
+                        <fpruntime:EventProperties.Events>
+                            <fpruntime:EventContainer />
+                        </fpruntime:EventProperties.Events>
+                        <fpruntime:BuddyReferenceProperties.BuddyProperties>
+                            <fpruntime:BuddyProperties BuddyReferences="Label,Label2" />
+                        </fpruntime:BuddyReferenceProperties.BuddyProperties>
+                    </erics:SingleNumericTextBox>
+                    <ation:TextBlock x:Name="Label2" Text="Threshold" Model:DesignerNodeProperties.SnapTo="False" Visibility="Visible" ation:Canvas.Left="135.5" ation:Canvas.Top="178" Margin="0">
+                        <fpruntime:AnimationProperties.Animations>
+                            <fpruntime:AnimationsContainer />
+                        </fpruntime:AnimationProperties.Animations>
+                        <fpruntime:EventProperties.Events>
+                            <fpruntime:EventContainer />
+                        </fpruntime:EventProperties.Events>
+                        <fpruntime:BuddyReferenceProperties.BuddyProperties>
+                            <fpruntime:BuddyProperties BuddyReferences="" BuddyOwner="Threshold" BuddyOffset="0, -20" BuddyVisible="True" BuddyLocked="False" />
+                        </fpruntime:BuddyReferenceProperties.BuddyProperties>
+                    </ation:TextBlock>
+                </fpruntime:FrontPanelCanvas>
+            </FrontPanel>
+            <BlockDiagram Name="__RootDiagram__">
+                <DataAccessor DataItem="Comparison" Id="n6" Bounds="231 154 105 14">
+                    <Terminal Id="Value" Direction="Output" Hotspot="1 0.5" Bounds="0 0 105 14" />
+                </DataAccessor>
+                <DataAccessor DataItem="Threshold" Id="n10" Bounds="231 168 98 14">
+                    <Terminal Id="Value" Direction="Output" Hotspot="1 0.5" Bounds="0 0 98 14" />
+                </DataAccessor>
+                <DataAccessor DataItem="Result" Id="n12" Bounds="588 154 70 14">
+                    <Terminal Id="Value" Direction="Input" Wire="w8" Hotspot="0 0.5" Bounds="0 0 70 14" />
+                </DataAccessor>
+                <DataAccessor DataItem="Port" Id="n14" Bounds="231 140 70 14">
+                    <Terminal Id="Value" Direction="Output" Hotspot="1 0.5" Bounds="0 0 70 14" />
+                </DataAccessor>
+                <DataAccessor DataItem="Rate" Id="n15" Bounds="588 140 70 14">
+                    <Terminal Id="Value" Direction="Input" Hotspot="0 0.5" Bounds="0 0 70 14" />
+                </DataAccessor>
+                <DataAccessor DataItem="InterruptsToListenFor_16B03592_CD76_4D58_8DC3_E3C3091E327A" Id="n39" Bounds="231 182 427 14">
+                    <Terminal Id="Numeric" Direction="Output" Hotspot="1 0.5" Bounds="0 0 427 14" />
+                </DataAccessor>
+                <Literal Facade="BooleanConstantFacade" Id="n7" Terminals="Out=w8" Bounds="553 154 14 14" Interpretation="Exact" DataType="Boolean">True</Literal>
+                <Wire Id="w8" Joints="N(n7:Out) N(n12:Value)" />
+            </BlockDiagram>
+        </VirtualInstrument>
+    </Namespace>
+</SourceFile>
